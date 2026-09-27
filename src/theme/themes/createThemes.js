@@ -7,20 +7,19 @@ const { createThemeColors } = require('./utils')
 const defaultThemes = [
   {
     id: 'green',
-    name: '绿意盎然',
-    isDark: false,
-    config: {
-      primary: 'rgb(77, 175, 124)',
-      font: 'rgb(33, 33, 33)',
-      'c-app-background': 'var(c-primary-light-600-alpha-700)',
-      'c-main-background': 'rgba(255, 255, 255, 1)',
-      'bg-image': '',
-      'bg-image-position': 'center',
-      'bg-image-size': 'cover',
-
-      'c-badge-primary': 'var(c-primary)',
-      'c-badge-secondary': '#4baed5',
-      'c-badge-tertiary': '#e7aa36',
+  name: '酷狗概念版',
+  isDark: false,
+  config: {
+    primary: 'rgb(108, 122, 137)',
+    font: 'rgb(33, 33, 33)',
+    'c-app-background': 'rgba(245, 245, 247, 1)',
+    'c-main-background': 'rgba(245, 245, 247, 1)',
+    'bg-image': '',
+    'bg-image-position': 'center',
+    'bg-image-size': 'cover',
+    'c-badge-primary': 'var(c-primary)',
+    'c-badge-secondary': '#4baed5',
+    'c-badge-tertiary': '#e7aa36',
     },
   },
   {
