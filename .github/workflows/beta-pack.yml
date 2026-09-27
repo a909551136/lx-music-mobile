@@ -36,10 +36,11 @@ jobs:
 
       - name: Generate file MD5
         run: |
-          cd android/app/build/outputs/apk/release
+          cd android/app/build/outputs/apk/debug
           md5sum *.apk
 
       - name: Upload Artifact
-        uses: ./.github/actions/upload-artifact
-        env:
-          PACKAGE_VERSION: ${{ env.PACKAGE_VERSION }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: lx-music-mobile-debug
+          path: android/app/build/outputs/apk/debug/*.apk
