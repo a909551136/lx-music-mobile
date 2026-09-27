@@ -16,14 +16,16 @@ jobs:
       - name: Setup Env
         uses: ./.github/actions/setup
 
-      - name: Build Theme
-        run: npm run build:theme
       - name: Build Packages
         env:
           DISABLE_SVG: 1
         shell: bash
         run: |
           cd android
+          echo "storeFile=debug.keystore" > keystore.properties
+          echo "storePassword=android" >> keystore.properties
+          echo "keyAlias=androiddebugkey" >> keystore.properties
+          echo "keyPassword=android" >> keystore.properties
           ./gradlew assembleDebug
 
       # Push tag to GitHub if package.json version's tag is not tagged
